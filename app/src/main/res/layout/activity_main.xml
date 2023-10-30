@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <EditText
+        android:id="@+id/et_note_title"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:padding="@dimen/_5sdp"
+        android:gravity="bottom"
+        android:background="@null"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:hint="Title"
+        android:textColorHint="@color/indigo"
+        android:textColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        />
+
+
+    <EditText
+        android:id="@+id/et_note_content"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_150sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:background="@drawable/note_content_border"
+        android:gravity="start"
+        android:inputType="textMultiLine"
+        android:hint="Enter your content here ..."
+        android:textColorHint="@color/indigo"
+        android:padding="@dimen/_5sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_note_title"
+         />
+    <Button
+        android:id="@+id/btn_save_note"
+        app:layout_constraintTop_toBottomOf="@+id/et_note_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="Save"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:backgroundTint="@color/grey"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12sdp"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+   <ScrollView
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/btn_save_note"
+       android:layout_marginTop="@dimen/_10sdp"
+       android:layout_width="match_parent"
+       android:layout_height="0dp">
+       <androidx.recyclerview.widget.RecyclerView
+           android:id="@+id/rv_note_list"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginBottom="@dimen/_10sdp"
+           />
+   </ScrollView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
